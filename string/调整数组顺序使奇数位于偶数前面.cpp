@@ -7,7 +7,7 @@
 class Solution {
 public:
     void reOrderArray(vector<int> &array) {
-        //方法  找到一个偶数，看它右边如果存在奇数就要移位，不存在就直接结束
+        //方法  找到一个偶数，看它右边如果存在奇数就要移位并且起点要不变(i--)，不存在就直接结束
         
         bool flag=1;   //大循环标志
         
