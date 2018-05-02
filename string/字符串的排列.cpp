@@ -15,12 +15,12 @@ public:
     vector<string> digui(string str)
     {
         vector<string> result;
-        if(str.size()==1)
+        if(str.size()==1)    //终止条件
         {
             result.push_back(str);
             return result;
         }
-        else
+        else     //向下层递归
         {
             for(int i=0;i<str.size();i++)
             {
@@ -40,7 +40,7 @@ public:
                 
                 
             }
-            return result;
+            return result;   //非必须，要返回值就返回呗
             
         }
     }
