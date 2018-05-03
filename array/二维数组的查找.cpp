@@ -21,7 +21,7 @@ public:
         }
         if(i==cols)
             return 0;
-        else  
+        else  //查找右边
         {
             for(;i<cols;i++)
             {
