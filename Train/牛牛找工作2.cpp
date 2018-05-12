@@ -31,9 +31,8 @@ public:
 
 bool comp_task(const work &a,const work &b)
 {
-    if(a.nandu==b.nandu)
-        return a.gongzi>b.gongzi;
-	return a.nandu < b.nandu;
+   
+     return a.nandu < b.nandu;
 }
 
 work task[1000000];
