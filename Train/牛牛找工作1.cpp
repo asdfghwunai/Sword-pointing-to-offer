@@ -1,5 +1,16 @@
 /*
-60%
+原版30%
+1.建multimap
+2.然后找满足难度要求终点
+3.再从头遍历到找到的终点来找工资最大的数
+
+改进一点 40%
+把2和3合并在找满足难度要求终点的过程中找最大工资
+
+改进一点60%
+把人物难度排序，到时下个人可以在上个人的难度终点处开始找
+
+然后就不行了，推测是建红黑树有点慢
 
 */
 
@@ -51,7 +62,7 @@ int main()
 
 		auto iter_zhongdian = m.begin();
 		//找iter终点
-		auto iter = m.begin();
+		auto iter = m.begin();                //被改进的地方2
 		int max = 0; 
 		for (int i = 0; i < people.size(); i++)
 		{
@@ -86,7 +97,7 @@ int main()
 			
 
 			/*
-			//找从头到遍历终点的最大值
+			//找从头到遍历终点的最大值     //被改进的地方1
 			iter_zhongdian++;
 			int max = 0;
 			for (auto iter = m.begin(); iter != iter_zhongdian; iter++)
