@@ -37,3 +37,26 @@ public:
         return result;
     }
 };
+
+
+/*
+方法2---用递归
+我确实是一下子写出来，不过写的过程中也是感觉着对才这样写
+*/
+class Solution {
+public:
+    void digui(ListNode* head,vector<int> &result)
+    {
+        if(head==NULL)
+            return ;
+        digui(head->next,result);  //先转移到孩子，再弄自己，当延迟操作
+        result.push_back(head->val);
+    }
+    
+    vector<int> printListFromTailToHead(ListNode* head) {
+        vector<int> result;
+        
+        digui(head,result);   //人家只要一个result，首先想到的是要用引用
+        return result;
+    }
+};
