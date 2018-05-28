@@ -17,7 +17,7 @@ class Solution {
 public:
     ListNode* ReverseList(ListNode* pHead) {
         //方法 --有俩指针，prev是前结点，维持不变，cur是遍历结点，一点点向后推
-javascript:void(0);        
+        
         if(pHead==NULL||pHead->next==NULL)
             return pHead;
         
