@@ -18,6 +18,10 @@ struct ListNode {
 class Solution {
 public:
     ListNode* FindKthToTail(ListNode* pListHead, unsigned int k) {
+	    
+	if(pListHead==NULL||k==0)	//这个是offer说要考虑鲁棒性
+	    return NULL;
+	    
         ListNode *fast=pListHead;
         ListNode *slow=pListHead;
         
