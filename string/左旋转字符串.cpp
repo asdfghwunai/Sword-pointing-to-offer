@@ -20,3 +20,21 @@ public:
         return str;  //这也证明不能return引用和指针
     }
 };
+
+/*
+反正就是一个规律
+*/
+
+class Solution {
+public:
+    string LeftRotateString(string str, int n) {
+        if(str.size()==0)
+            return "";
+        reverse(str.begin(),str.begin()+n);
+        reverse(str.begin()+n,str.end());
+        
+        reverse(str.begin(),str.end());
+        
+        return str;
+    }
+};
