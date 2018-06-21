@@ -34,14 +34,14 @@ public:
             }
             else
             {
-                while(hou&&hou->val==cur->val)
+                while(hou&&hou->val==cur->val)  //找到不一样的
                     hou=hou->next;
                 if(hou==NULL)   //直接结束,是为了解决重复4 4结尾的
                 {
                     pre->next=NULL;
                     break;
                 }
-                else
+                else    //这个地方想想就明白了
                 {
                     pre->next=hou;   //怎么从前向后接啊？
                     cur=hou;
