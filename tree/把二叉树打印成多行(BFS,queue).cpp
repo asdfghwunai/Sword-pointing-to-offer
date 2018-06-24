@@ -12,6 +12,9 @@ struct TreeNode {
     }
 };
 */
+/*
+就照自己的方法来了，写的容易懂，会做就行
+*/
 
 class Solution {
 public:
