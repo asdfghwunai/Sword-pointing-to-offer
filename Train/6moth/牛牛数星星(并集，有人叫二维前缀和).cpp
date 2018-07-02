@@ -99,3 +99,44 @@ int main()
  
     return 0;
 }
+
+//--------------------------标准答案啊
+#include<iostream>
+#include<string.h>
+using namespace std;
+const int maxn = 1e3 + 5;   //这是个好习惯
+int num[maxn][maxn];      
+int mp[maxn][maxn];    //星星图，放全局估计是防止栈溢出
+
+int n, m;    //星星和问题数量
+int x,y;    //星星的位置
+int a1, b1, a2, b2;  //问题的坐标
+int main()
+{
+    memset(num, 0, sizeof(num));
+    memset(mp, 0, sizeof(mp));
+    
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d%d", &x, &y);
+        mp[x][y]++;
+    }
+
+
+     for(int i = 1; i < maxn; i++)   //计算该点左上角有多少星星，注意起点坐标为(1,1)
+     {
+        for(int j = 1; j < maxn; j++) {
+            num[i][j] = num[i - 1][j] + num[i][j - 1] + mp[i][j] - num[i - 1][j - 1];
+        }
+    }
+
+
+    scanf("%d", &m);
+    for(int i = 0; i < m; i++)   //通过num图直接计算
+    {
+        scanf("%d%d%d%d", &a1, &b1, &a2, &b2);
+        printf("%d\n", num[a2][b2] - num[a1 - 1][b2] - num[a2][b1 - 1] + num[a1 - 1][b1 - 1]);
+    }
+    
+    return 0;
+}
