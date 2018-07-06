@@ -5,6 +5,8 @@
 /*----方法----
 注意操作前先把int转为unsigned int,因为对int负数移位和你想的不太一样，说什么最后会变成0xFFFFFFFF
 
+注意int转为unsigned int还是它在计算机的样子
+
 */
 
 class Solution {
