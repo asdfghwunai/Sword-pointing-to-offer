@@ -11,6 +11,8 @@
  仔细想了想不行，快排分区要返回一个partition，这个交换只是让前后颠倒，不能找到那个分区
 
 */
+
+//方法  找到一个偶数，看它右边如果存在奇数就要移位并且起点要不变(i--)，不存在就直接结束
 class Solution {
 public:
     void reOrderArray(vector<int> &array) {
