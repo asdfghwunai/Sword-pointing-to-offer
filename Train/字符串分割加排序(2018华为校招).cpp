@@ -1,3 +1,15 @@
+/*
+排序规则:
+次数多的放后面
+如果次数一样，大的放后面
+
+输入:
+a11b2bac3bad3abcd2
+输出：
+abcdabcdbbbacbacbacbadbadbadaaaaaaaaaaa
+
+*/
+
 #include<iostream>
 #include<string>
 #include<algorithm>
