@@ -61,13 +61,13 @@ void digui(string str,int start,int len,vector<string> &vec)
 	if (hs.find(sub1) != hs.end())
 	{
 		vec.push_back(sub1);
-		digui(sub2, 0, max, vec);
+		digui(sub2, 0, max, vec);   //有的话就看下一小截
 	}
 	else
 	{
 		if (!vec.empty())
 			vec.pop_back();
-		digui(str, 0, len-1, vec);
+		digui(str, 0, len-1, vec);   //不满足就回退
 	}
 
 }
