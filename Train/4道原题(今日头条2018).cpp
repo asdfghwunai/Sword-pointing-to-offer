@@ -1,4 +1,4 @@
-/*
+//最长无重复字符串---哈希
 #include<iostream>
 #include<string.h>
 #include<string>
@@ -36,9 +36,9 @@ int main()
 //bbbbb
 //abcabcabc
 
-*/
 
 
+//===============================================
 /*
 #include <iostream>
 
@@ -98,9 +98,10 @@ int main()
 
 */
 
-//图分团队
 
-/*
+
+//图分团队---图的dfs
+
 #include <iostream>
 
 using namespace std;
@@ -155,9 +156,9 @@ int main()
 	return 0;
 }
 
-*/
 
 
+//===============================================
 //复原IP地址
 /*
 #include <iostream>
@@ -212,8 +213,7 @@ int main()
 
 */
 
-
-
+//判断一个无.数字字符串可以划分成IP的数量---递归
 #include <iostream>
 #include <string>
 #include <vector>
@@ -267,7 +267,8 @@ int main()
 }
 
 
-
+//============================
+//查看是否是unicode码
 
 #include <iostream>
 #include <vector>
