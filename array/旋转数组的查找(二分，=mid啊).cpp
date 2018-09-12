@@ -37,6 +37,6 @@ public:
             else if(rotateArray[mid]>=rotateArray[first])  //这里有=推测是有的样例存在一样的元素，非递减
                 first=mid;
         }
-        return rotateArray[last];
+        return rotateArray[last];  //返回较小的
     }
 };
